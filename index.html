@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho tal tal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="cabecalho">
+        <p>Link cozinheiro</p>
+    </div>
+
+    <div id="item1">
+        <img src="./imagens/omelete.png">
+        <p>Omelete de Legumes</p>
+        <p id="preco1">190,00 Rupees</p>
+        <input type="button" value="Comprar Agora" id="omelete">
+    </div>
+
+    <div id="item2">
+        <img src="./imagens/salmao.png">
+        <p>Salmão Meuniére</p>
+        <p id="preco2">299,99 Rupees</p>
+        <input type="button" value="Comprar Agora" id="salmao">
+    </div>
+
+    <div id="item3">
+        <img src="./imagens/bolo.png">
+        <p>Bolo de Frutas</p>
+        <p id="preco3">70,00 Rupees</p>
+        <input type="button" value="Comprar Agora" id="bolo">
+    </div>
+
+    <div id="pagamento">
+        <p><b>Selecione a Forma de Pagamento:</b></p>
+        <input type="radio" name="pagamento" value="pix" id="pix"> PIX
+        <input type="radio" name="pagamento" value="credito" id="credito"> Cartão de Crédito
+    </div>
+
+    <div id="pagamento_pix">
+        <p><b>Conclua o Pagamento:</b></p>
+        Digite o número do seu CPF: <input type="text" id="cpf" onkeyup="mascaraCPF()">
+        <br>
+        <br>
+        <input type="button" value="Finalizar Compra" id="finalizar_pix">
+    </div>
+
+    <!-- <div id="pagamento_cartao">
+        <p><b>Conclua o Pagamento:</b></p>
+        Nome do Titular: <input type="text">
+        Número do Cartão: <input type="text"> <br>
+        Quantidade de Parcelas: <select name="parcelas">
+            <option value="x1"></option>
+            <option value="x2"></option>
+            <option value="x3"></option>
+            <option value="x4"></option>
+            <option value="x5"></option>
+        </select>
+        <br>
+        <br>
+        <input type="button" value="Finalizar Compra" id="finalizar_cartao">
+    </div> -->
+    <div id="realizado">
+        <p>eh nois</p>
+    </div>
+</body>
+</html>

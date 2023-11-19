@@ -1,0 +1,85 @@
+body {
+    background-color: #fdffe0;
+    margin: 0;
+}
+
+#cabecalho {
+    background-color: 	#92c582;
+    width: 1379;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius:31px;
+    margin: 20px auto;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#item1 {
+    width: 415px;
+    height: 460px;
+    position: absolute;
+    top: 204px;
+    left: 53px;
+    background-color: #fdffe0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#item2 {
+    width: 415px;
+    height: 460px;
+    position: absolute;
+    top: 204px;
+    left: 512px;
+    background-color: #fdffe0;
+    text-align: center;
+}
+
+#item3 {
+    width: 415px;
+    height: 460px;
+    position: absolute;
+    top: 204px;
+    left: 971px; 
+    background-color: #fdffe0;
+    text-align: center;
+}
+
+#pagamento {
+    width: 1379px;
+    height: 100px;
+    top: 700px;
+    left: 63px;
+    background-color: #fdffe0;
+    position: absolute;
+    text-align: center;
+}
+
+#pagamento_pix {
+    width: 100%;
+    height: 150px;
+    top: 800px;
+    position: absolute;
+    text-align: center;
+    padding-left: 20px;
+    background-color: #fdffe0;
+}
+
+#pagamento_cartao {
+    width: 100%;
+    height: 150px;
+    top: 800px;
+    position: absolute;
+    text-align: center;
+    padding-left: 20px;
+    background-color: #fdffe0;
+}
+
+#realizado {
+    width: 100%;
+    height: 100px;
+    top: 1000px;
+    position: absolute;
+    text-align: center;
+}
