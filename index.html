@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho tal tal</title>
+    <title>Cozinha do Link</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -16,38 +16,39 @@
         <img src="./imagens/omelete.png">
         <p>Omelete de Legumes</p>
         <p id="preco1">190,00 Rupees</p>
-        <input type="button" value="Comprar Agora" id="omelete">
+        <input type="button" value="Comprar Agora" id="omelete"  onclick="produtoSelecionado('omelete')">
     </div>
 
     <div id="item2">
         <img src="./imagens/salmao.png">
         <p>Salmão Meuniére</p>
         <p id="preco2">299,99 Rupees</p>
-        <input type="button" value="Comprar Agora" id="salmao">
+        <input type="button" value="Comprar Agora" id="salmao" onclick="produtoSelecionado('salmao')">
     </div>
 
     <div id="item3">
         <img src="./imagens/bolo.png">
         <p>Bolo de Frutas</p>
         <p id="preco3">70,00 Rupees</p>
-        <input type="button" value="Comprar Agora" id="bolo">
+        <input type="button" value="Comprar Agora" id="bolo" onclick="produtoSelecionado('bolo')">
     </div>
 
     <div id="pagamento">
         <p><b>Selecione a Forma de Pagamento:</b></p>
-        <input type="radio" name="pagamento" value="pix" id="pix"> PIX
-        <input type="radio" name="pagamento" value="credito" id="credito"> Cartão de Crédito
+        <input type="radio" name="pagamento" value="pix" id="pix" oninput="mostrarDivPagamento('pagamentoPix')"> PIX
+        <input type="radio" name="pagamento" value="credito" id="credito" oninput="mostrarDivPagamento('pagamentoCartao')"> Cartão de Crédito
     </div>
 
-    <div id="pagamento_pix">
+    <div id="pagamentoPix">
         <p><b>Conclua o Pagamento:</b></p>
+        Insira seu nome: <input type="text"> <br>
         Digite o número do seu CPF: <input type="text" id="cpf" onkeyup="mascaraCPF()">
         <br>
         <br>
-        <input type="button" value="Finalizar Compra" id="finalizar_pix">
+        <input type="button" value="Finalizar Compra" id="finalizarPix">
     </div>
 
-    <!-- <div id="pagamento_cartao">
+    <div id="pagamentoCartao">
         <p><b>Conclua o Pagamento:</b></p>
         Nome do Titular: <input type="text">
         Número do Cartão: <input type="text"> <br>
@@ -60,8 +61,9 @@
         </select>
         <br>
         <br>
-        <input type="button" value="Finalizar Compra" id="finalizar_cartao">
-    </div> -->
+        <input type="button" value="Finalizar Compra" id="finalizarCartao">
+    </div>
+
     <div id="realizado">
         <p>eh nois</p>
     </div>
