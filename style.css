@@ -5,7 +5,7 @@ body {
 
 #cabecalho {
     background-color: 	#92c582;
-    width: 1379;
+    width: 1200;
     height: 150px;
     flex-shrink: 0;
     border-radius:31px;
@@ -15,42 +15,47 @@ body {
     padding-top: 10px;
 }
 
+
+#comida {
+    width: 200px;
+    height: 200px;
+}
+
 #item1 {
-    width: 415px;
+    width: 350px;
     height: 460px;
     position: absolute;
     top: 204px;
-    left: 53px;
+    /* left: 5px; */
     background-color: #fdffe0;
     box-sizing: border-box;
     text-align: center;
 }
 
 #item2 {
-    width: 415px;
+    width: 350px;
     height: 460px;
     position: absolute;
     top: 204px;
-    left: 512px;
+    left: 420px;
     background-color: #fdffe0;
     text-align: center;
 }
 
 #item3 {
-    width: 415px;
+    width: 350px;
     height: 460px;
     position: absolute;
     top: 204px;
-    left: 971px; 
+    left: 850px; 
     background-color: #fdffe0;
     text-align: center;
 }
 
 #pagamento {
-    width: 1379px;
+    width: 1200px;
     height: 100px;
-    top: 700px;
-    left: 63px;
+    top: 560px;
     background-color: #fdffe0;
     position: absolute;
     text-align: center;
@@ -58,20 +63,19 @@ body {
 }
 
 #pagamentoPix {
-    width: 100%;
+    width: 1200px;
     height: 150px;
-    top: 800px;
+    top: 650px;
     position: absolute;
     text-align: center;
-    padding-left: 20px;
     background-color: #fdffe0;
     display: none;
 }
 
 #pagamentoCartao {
-    width: 100%;
+    width: 1200px;
     height: 150px;
-    top: 800px;
+    top: 650px;
     position: absolute;
     text-align: center;
     padding-left: 20px;

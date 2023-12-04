@@ -3,17 +3,22 @@ function mascararCPF() {
     let valor = cpf.value;
     let numeros = valor.replace(/\D/g, "");
 
-    if (/[^0-9]/.test(valor)) {
+    if (/[^0-9.-]/.test(valor)) {
         alert("Apenas números são permitidos no CPF.");
-        cpf.value = valor.replace(/\D/g, "");
+        cpf.value = valor.replace(/[^0-9.-]/g, "");
         return;
     }
-
-    valor = numeros.replace(/(\d{3})(\d)/, "$1.$2");
-    valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
-    valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-
-    cpf.value = valor.slice(0, 14);
+    if (numeros.length < 11) {
+        valor = numeros.replace(/(\d{3})(\d)/, "$1.$2");
+        valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+        valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        cpf.value = valor;
+    }
+    if (numeros.length <= 11) {
+        cpf.value = valor;
+    } else {
+        cpf.value = valor.slice(0, 14);
+    }
 }
 
 
@@ -71,16 +76,16 @@ function mostrarDivPagamento(divID) {
     var divPagamento = document.getElementById(divID);
     divPagamento.style.display = "block";
 }
+function mostrarRecibo() {
+    var DIVrecibo = document.getElementById("recibo");
+    var nomePix = document.getElementById("nomePix").value.trim();
+    var nomeCartao = document.getElementById("nomeCartao").value.trim();
+    var cpf = document.getElementById("cpf").value.trim();
 
-// function mostrarRecibo() {
-//     var DIVrecibo = document.getElementById("recibo");
-//     var nomePix = document.getElementById("nomePix");
-//     var nomeCartao = document.getElementById("nomeCartao");
-//     var cpf = document.getElementById("cpf");
-
-//     if (nomePix !== "" || nomeCartao !== "" && cpf !== "") {
-//         DIVrecibo.style.display = "block";
-//         console.log("OI")
-//     } else {
-//         DIVrecibo.style.display = "none";
-//     }}
+    if (nomePix !== "" && cpf !== "") {
+        DIVrecibo.style.display = "block";
+        console.log("OI");
+    } else {
+        DIVrecibo.style.display = "none";
+    }
+}

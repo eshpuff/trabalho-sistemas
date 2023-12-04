@@ -13,21 +13,21 @@
     </div>
 
     <div id="item1">
-        <img src="./imagens/omelete.png">
+        <img id="comida" src="./imagens/omelete.png">
         <p>Omelete de Legumes</p>
         <p id="preco1">190,00 Rupees</p>
         <input type="button" value="Comprar Agora" id="omelete"  onclick="produtoSelecionado('omelete')">
     </div>
 
     <div id="item2">
-        <img src="./imagens/salmao.png">
+        <img id="comida" src="./imagens/salmao.png">
         <p>Salmão Meuniére</p>
         <p id="preco2">299,99 Rupees</p>
         <input type="button" value="Comprar Agora" id="salmao" onclick="produtoSelecionado('salmao')">
     </div>
 
     <div id="item3">
-        <img src="./imagens/bolo.png">
+        <img id="comida" src="./imagens/bolo.png">
         <p>Bolo de Frutas</p>
         <p id="preco3">70,00 Rupees</p>
         <input type="button" value="Comprar Agora" id="bolo" onclick="produtoSelecionado('bolo')">
@@ -42,7 +42,7 @@
     <div id="pagamentoPix">
         <p><b>Conclua o Pagamento:</b></p>
         Insira seu nome: <input type="text" id="nomePix"> <br>
-        Digite o número do seu CPF: <input type="text" id="cpf" onkeypress="mascararCPF()">
+        Digite o número do seu CPF: <input type="text" id="cpf" oninput="mascararCPF()" >
         <br>
         <br>
         <input type="button" value="Finalizar Compra" id="finalizarPix" onclick="mostrarRecibo()">
