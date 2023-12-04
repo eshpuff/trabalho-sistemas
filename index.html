@@ -41,17 +41,19 @@
 
     <div id="pagamentoPix">
         <p><b>Conclua o Pagamento:</b></p>
-        Insira seu nome: <input type="text"> <br>
-        Digite o número do seu CPF: <input type="text" id="cpf" onkeyup="mascaraCPF()">
+        Insira seu nome: <input type="text" id="nomePix"> <br>
+        Digite o número do seu CPF: <input type="text" id="cpf" onkeypress="mascararCPF()">
         <br>
         <br>
-        <input type="button" value="Finalizar Compra" id="finalizarPix">
+        <input type="button" value="Finalizar Compra" id="finalizarPix" onclick="mostrarRecibo()">
     </div>
 
     <div id="pagamentoCartao">
         <p><b>Conclua o Pagamento:</b></p>
-        Nome do Titular: <input type="text">
-        Número do Cartão: <input type="text"> <br>
+        Nome do Titular: <input type="text" id="nomeCartao">
+        Número do Cartão: <input type="text" id="cartaoCredito" oninput = "mascararCartao()"> <br>
+        Validade: <input type="text" id="validadeCartao" oninput="mascararValidade()"> 
+        CVV <input type="number" id="cvv" oninput="mascararCVV()"> <br>
         Quantidade de Parcelas: <select name="parcelas">
             <option value="x1"></option>
             <option value="x2"></option>
@@ -61,10 +63,10 @@
         </select>
         <br>
         <br>
-        <input type="button" value="Finalizar Compra" id="finalizarCartao">
+        <input type="button" value="Finalizar Compra" id="finalizarCartao" onclick="mostrarRecibo()">
     </div>
 
-    <div id="realizado">
+    <div id="recibo">
         <p>eh nois</p>
     </div>
 </body>
