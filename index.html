@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozinha do Link</title>
+    <title>Bistrô D'Link</title>
+    <link rel="shortcut icon" type="imagex/png" href="./imagens/icon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
     <div id="cabecalho">
-        <p>Link cozinheiro</p>
+        <img src="./imagens/cabecalho.png">
     </div>
-
+    
     <div id="item1">
         <img id="comida" src="./imagens/omelete.png">
         <p>Omelete de Legumes</p>
-        <p id="preco1">190,00 Rupees</p>
+        <p id="preco1"> 190,00 Rupees </p>
         <input type="button" value="Comprar Agora" id="omelete"  onclick="produtoSelecionado('omelete')">
     </div>
 
@@ -36,7 +37,7 @@
     <div id="pagamento">
         <p><b>Selecione a Forma de Pagamento:</b></p>
         <input type="radio" name="pagamento" value="pix" id="pix" oninput="mostrarDivPagamento('pagamentoPix')"> PIX
-        <input type="radio" name="pagamento" value="credito" id="credito" oninput="mostrarDivPagamento('pagamentoCartao')"> Cartão de Crédito
+        <input type="radio" name="pagamento" value="credito" id="credito" oninput="mostrarDivPagamento('pagamentoCartao')" > Cartão de Crédito
     </div>
 
     <div id="pagamentoPix">
@@ -45,29 +46,30 @@
         Digite o número do seu CPF: <input type="text" id="cpf" oninput="mascararCPF()" >
         <br>
         <br>
-        <input type="button" value="Finalizar Compra" id="finalizarPix" onclick="mostrarRecibo()">
+        <input type="button" value="Finalizar Compra" id="finalizarPix" onclick="mostrarReciboPix()" >
     </div>
 
-    <div id="pagamentoCartao">
+    <div id="pagamentoCartao" >
         <p><b>Conclua o Pagamento:</b></p>
         Nome do Titular: <input type="text" id="nomeCartao">
         Número do Cartão: <input type="text" id="cartaoCredito" oninput = "mascararCartao()"> <br>
         Validade: <input type="text" id="validadeCartao" oninput="mascararValidade()"> 
         CVV <input type="number" id="cvv" oninput="mascararCVV()"> <br>
-        Quantidade de Parcelas: <select name="parcelas">
-            <option value="x1"></option>
-            <option value="x2"></option>
-            <option value="x3"></option>
-            <option value="x4"></option>
-            <option value="x5"></option>
+
+        Quantidade de Parcelas: <select name="parcelas" id="parcelas" onclick="parcelamento()">
+            <option value="x1" id="x1">1x de</option>
+            <option value="x2" id="x2">2x de</option>
+            <option value="x3" id="x3">3x de</option>
+            <option value="x4" id="x4">(Com juros) 4x de</option>
+            <option value="x5" id="x5">(Com juros) 5x de</option>
         </select>
         <br>
         <br>
-        <input type="button" value="Finalizar Compra" id="finalizarCartao" onclick="mostrarRecibo()">
+        <input type="button" value="Finalizar Compra" id="finalizarCartao" onclick="mostrarReciboCartao()">
     </div>
 
     <div id="recibo">
-        <p>eh nois</p>
+        <img src="./imagens/recibo.png">
     </div>
 </body>
 </html>

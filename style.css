@@ -12,13 +12,11 @@ body {
     margin: 20px auto;
     text-align: center;
     padding-left: 20px;
-    padding-top: 10px;
 }
 
-
 #comida {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 #item1 {
@@ -26,7 +24,7 @@ body {
     height: 460px;
     position: absolute;
     top: 204px;
-    /* left: 5px; */
+    left: 5px;
     background-color: #fdffe0;
     box-sizing: border-box;
     text-align: center;
@@ -37,7 +35,7 @@ body {
     height: 460px;
     position: absolute;
     top: 204px;
-    left: 420px;
+    left: 750px;
     background-color: #fdffe0;
     text-align: center;
 }
@@ -47,7 +45,7 @@ body {
     height: 460px;
     position: absolute;
     top: 204px;
-    left: 850px; 
+    left: 1500px; 
     background-color: #fdffe0;
     text-align: center;
 }
@@ -55,7 +53,8 @@ body {
 #pagamento {
     width: 1200px;
     height: 100px;
-    top: 560px;
+    top: 660px;
+    left: 320px;
     background-color: #fdffe0;
     position: absolute;
     text-align: center;
@@ -65,7 +64,8 @@ body {
 #pagamentoPix {
     width: 1200px;
     height: 150px;
-    top: 650px;
+    top: 750px;
+    left: 320px;
     position: absolute;
     text-align: center;
     background-color: #fdffe0;
@@ -75,7 +75,8 @@ body {
 #pagamentoCartao {
     width: 1200px;
     height: 150px;
-    top: 650px;
+    top: 750px;
+    left: 320px;
     position: absolute;
     text-align: center;
     padding-left: 20px;
@@ -84,10 +85,14 @@ body {
 }
 
 #recibo {
-    width: 100%;
-    height: 100px;
-    top: 1000px;
+    background-color: #92c582;
+    width: 33cm;
+    height: 300px;
+    flex-shrink: 0;
+    top: 920px;
+    left: 5px;
     position: absolute;
-    text-align: center;
+    align-items: center;
     display: none;
+    padding-left: 650px;
 }
