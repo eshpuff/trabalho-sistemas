@@ -17,21 +17,21 @@
         <img id="comida" src="./imagens/omelete.png">
         <p>Omelete de Legumes</p>
         <p id="preco1"> 190,00 Rupees </p>
-        <input type="button" value="Comprar Agora" id="omelete"  onclick="produtoSelecionado('omelete')">
+        <input type="button" value="Comprar Agora" id="omelete"  onclick="parcelamento('omelete')">
     </div>
 
     <div id="item2">
         <img id="comida" src="./imagens/salmao.png">
         <p>Salmão Meuniére</p>
         <p id="preco2">299,99 Rupees</p>
-        <input type="button" value="Comprar Agora" id="salmao" onclick="produtoSelecionado('salmao')">
+        <input type="button" value="Comprar Agora" id="salmao" onclick="parcelamento('salmao')">
     </div>
 
     <div id="item3">
         <img id="comida" src="./imagens/bolo.png">
         <p>Bolo de Frutas</p>
         <p id="preco3">70,00 Rupees</p>
-        <input type="button" value="Comprar Agora" id="bolo" onclick="produtoSelecionado('bolo')">
+        <input type="button" value="Comprar Agora" id="bolo" onclick="parcelamento('bolo')">
     </div>
 
     <div id="pagamento">
@@ -55,13 +55,12 @@
         Número do Cartão: <input type="text" id="cartaoCredito" oninput = "mascararCartao()"> <br>
         Validade: <input type="text" id="validadeCartao" oninput="mascararValidade()"> 
         CVV <input type="number" id="cvv" oninput="mascararCVV()"> <br>
-
-        Quantidade de Parcelas: <select name="parcelas" id="parcelas" onclick="parcelamento()">
-            <option value="x1" id="x1">1x de</option>
-            <option value="x2" id="x2">2x de</option>
-            <option value="x3" id="x3">3x de</option>
-            <option value="x4" id="x4">(Com juros) 4x de</option>
-            <option value="x5" id="x5">(Com juros) 5x de</option>
+        Quantidade de Parcelas: <select name="parcelas" id="parcelas" onchange="mostrarParcelas()">
+            <option value="x1" id="x1"></option>
+            <option value="x2" id="x2"></option>
+            <option value="x3" id="x3"></option>
+            <option value="x4" id="x4"></option>
+            <option  value="x5" id="x5"></option>
         </select>
         <br>
         <br>
@@ -71,5 +70,6 @@
     <div id="recibo">
         <img src="./imagens/recibo.png">
     </div>
+
 </body>
 </html>

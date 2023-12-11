@@ -16,7 +16,8 @@ function mascararCPF() {
     }
     if (numeros.length <= 11) {
         cpf.value = valor;
-    } else {
+    }
+    else {
         cpf.value = valor.slice(0, 14);
     }
 }
@@ -25,7 +26,7 @@ function mascararCartao() {
     var numeroCartao = document.getElementById("cartaoCredito").value;
     var numeros = numeroCartao.replace(/\D/g, "");
     var cartaoFormatado = numeros.replace(/(\d{4})/g, "$1 ");
-
+    
     cartaoFormatado = cartaoFormatado.trim();
     cartaoFormatado = cartaoFormatado.slice(0, 19);
 
@@ -51,52 +52,44 @@ function mascararValidade() {
 }
 
 
-function mostrarPagamento() {
-    var DIVpagamento = document.getElementById("pagamento");
-    DIVpagamento.style.display = "block";
-}
-
-function produtoSelecionado(IDproduto) {
-    var DIVpagamento = document.getElementById("pagamento");
-    DIVpagamento.style.display = "none";
-
-    if (IDproduto === "omelete" || IDproduto === "salmao" || IDproduto === "bolo") {
-        mostrarPagamento();
-    } else {
-        DIVpagamento.style.display = "none";
-    }
-}
 
 function mostrarDivPagamento(divID) {
+    var divCartao = document.getElementById("pagamentoCartao");
+    divCartao.style.display = "none";
+
     var divPagamento = document.getElementById(divID);
     divPagamento.style.display = "block";
 }
 
-function parcelamento() {
-    var parcelas = document.getElementById("parcelas").value;
-    var preco = "100"
+function parcelamento(IDproduto) {
+    var DIVpagamento = document.getElementById("pagamento");
+    var id = IDproduto;
 
-    if (parcelas == "x1") {
-       document.getElementById("x1").innerHTML = "1x de " + preco + " Rupees"
+    if( id == "salmao") {
+        var preco = 299.99;
     } 
-    if (parcelas == "x2") {
-        var parcela = preco / 2
-        document.getElementById("x2").innerHTML = "2x de " + parcela + " Rupees"
+    if (id == "omelete")  {
+        var preco = 190;
     }
-    if (parcelas == "x3") {
-        var parcela = (preco / 3).toFixed(2)
-        document.getElementById("x3").innerHTML = "3x de " + parcela + " Rupees"
-     } 
-     if (parcelas == "x4") {
-        var parcela = (preco / 4) * (1 + 0.05).toFixed(2)
-         document.getElementById("x4").innerHTML = "(Com juros) 4x de " + parcela + " Rupees"
-     }
-     if (parcelas == "x5") {
-        var parcela = (preco / 5 ) * (1 + 0.1).toFixed(2)
-        document.getElementById("x5").innerHTML = "(Com juros) 5x de " + parcela + " Rupees"
-     } 
-     
-    console.log(parcelas)
+    if (id == "bolo") {
+        var preco = 70;
+    }    
+
+    DIVpagamento.style.display="block";
+    
+    localStorage.setItem('preco', JSON.stringify(preco));
+    mostrarParcelas();
+}
+
+function mostrarParcelas() {
+    const preco = JSON.parse(localStorage.getItem('preco'));
+    const select = document.getElementById("parcelas");
+
+    select.options[0].innerHTML = "1x de " + preco.toFixed(2) + " Rupees";
+    select.options[1].innerHTML = "2x de " + (preco / 2).toFixed(2) + " Rupees";
+    select.options[2].innerHTML = "3x de " + (preco /3).toFixed(2) + " Rupees";
+    select.options[3].innerHTML = "(Com juros) 4x de " + ((preco / 4) * (1 + 0.05)).toFixed(2) + " Rupees";
+    select.options[4].innerHTML = "(Com juros) 5x de " + ((preco / 5) * (1 + 0.1)).toFixed(2) + " Rupees";
 }
 
 
@@ -107,7 +100,8 @@ function mostrarReciboPix() {
 
     if (nomePix !== "" && cpf !== "") {
         DIVrecibo.style.display = "block";
-    } else {
+    }
+    else {
         DIVrecibo.style.display = "none";
     }
 }
@@ -121,8 +115,8 @@ function mostrarReciboCartao() {
 
     if (nomeCartao !== "" && cartaoCredito !== "" && validadeCartao !== "" && cvv !== ""){
         DIVrecibo.style.display = "block";
-    } else {
+    }
+    else {
         DIVrecibo.style.display = "none";
     }
 }
-
